@@ -1,9 +1,11 @@
-# Define a float
-y = 1.
-print(y)
-print(type(y))
 
-# Convert float to integer with the int function
-z = int(y)
-print(z)
-print(type(z))
+
+# Ask for user input
+name = input("What's your name? ")
+age = int(input("How old are you? "))
+
+# Calculate next year's age
+next_year_age = age + 1
+
+# Display the message
+print(f"Hello, {name}! Next year, you will be {next_year_age} years old.")
