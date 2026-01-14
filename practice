@@ -1,5 +1,0 @@
-length = float(input("enter the length"))
-witdth = float(input("enter the width"))
-area = length * witdth
-print(area)
-
