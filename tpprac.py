@@ -26,3 +26,9 @@ print("Min:", min(numbers))
 print("Sum:", sum(numbers))
 print("Average:", sum(numbers) / len(numbers))
 
+# random_numbers.py
+
+import random
+
+numbers = [random.randint(1, 100) for _ in range(5)]
+print("Generated numbers:", numbers)
