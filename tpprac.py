@@ -1,0 +1,17 @@
+# student_marks.py
+
+students = {
+    "Rahul": 85,
+    "Anita": 92,
+    "Suresh": 78,
+    "Meena": 88
+}
+
+# Calculate average marks
+average = sum(students.values()) / len(students)
+
+# Find topper
+topper = max(students, key=students.get)
+
+print("Average Marks:", average)
+print("Topper:", topper, "with", students[topper], "marks")
