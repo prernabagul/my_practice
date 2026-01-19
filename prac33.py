@@ -14,3 +14,18 @@ for word in words:
 print("Word Frequency:")
 for k, v in word_count.items():
     print(k, ":", v)
+
+
+# email_validator.py
+
+emails = [
+    "user@gmail.com",
+    "wrong-email",
+    "admin@company.org"
+]
+
+for email in emails:
+    if "@" in email and "." in email:
+        print(email, "is valid")
+    else:
+        print(email, "is invalid")
