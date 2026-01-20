@@ -69,3 +69,12 @@ def is_prime(n):
 
 for num in numbers:
     print(num, "Prime" if is_prime(num) else "Not Prime")
+
+# write_file.py
+
+lines = ["Python\n", "Data\n", "ML\n"]
+
+with open("output.txt", "w") as file:
+    file.writelines(lines)
+
+print("File written successfully")
