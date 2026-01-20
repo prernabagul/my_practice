@@ -44,3 +44,15 @@ for num in numbers:
     seen.add(num)
 
 print("Duplicates:", duplicates)
+
+# datetime_analyzer.py
+
+from datetime import datetime
+
+now = datetime.now()
+
+print("Current Date:", now.date())
+print("Current Time:", now.time())
+print("Year:", now.year)
+
+
