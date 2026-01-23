@@ -9,3 +9,5 @@ print("Squares:", squares)
 print("Evens:", evens)
 cubes = [n**3 for n in numbers]
 print("Cubes:", cubes)
+odds = [n for n in numbers if n % 2 != 0]
+print("Odds:", odds)
