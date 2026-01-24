@@ -22,3 +22,7 @@ logging.info("Application started")
 logging.warning("Low memory warning")
 logging.error("Error occurred")
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
