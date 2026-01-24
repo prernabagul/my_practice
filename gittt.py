@@ -11,3 +11,14 @@ cubes = [n**3 for n in numbers]
 print("Cubes:", cubes)
 odds = [n for n in numbers if n % 2 != 0]
 print("Odds:", odds)
+
+# logging_demo.py
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+logging.info("Application started")
+logging.warning("Low memory warning")
+logging.error("Error occurred")
+
