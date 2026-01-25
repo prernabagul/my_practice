@@ -31,6 +31,10 @@ logging.info("System running normally")
 logging.warning("Disk usage is high")
 logging.error("Failed to load module")
 logging.critical("System crash imminent")
+try:
+    x = 5 / 0
+except Exception:
+    logging.exception("Unexpected error occurred")
 
 logging.info("Application finished")
 logging.shutdown()
