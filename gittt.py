@@ -1,16 +1,16 @@
 # list_comprehension.py
 
-numbers = [1, 2, 3, 4, 5, 6]
+#numbers = [1, 2, 3, 4, 5, 6]
 
-squares = [n**2 for n in numbers]
-evens = [n for n in numbers if n % 2 == 0]
+#squares = [n**2 for n in numbers]
+#evens = [n for n in numbers if n % 2 == 0]
 
-print("Squares:", squares)
-print("Evens:", evens)
-cubes = [n**3 for n in numbers]
-print("Cubes:", cubes)
-odds = [n for n in numbers if n % 2 != 0]
-print("Odds:", odds)
+#print("Squares:", squares)
+#print("Evens:", evens)
+#cubes = [n**3 for n in numbers]
+#print("Cubes:", cubes)
+#odds = [n for n in numbers if n % 2 != 0]
+#print("Odds:", odds)
 
 # logging_demo.py
 
@@ -26,5 +26,11 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+logging.debug("Debugging details")
+logging.info("System running normally")
+logging.warning("Disk usage is high")
+logging.error("Failed to load module")
+logging.critical("System crash imminent")
+
 logging.info("Application finished")
 logging.shutdown()
