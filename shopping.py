@@ -6,25 +6,39 @@ items = {
     "Sugar": 45
 }
 
-cart = ["Milk", "Eggs", "Rice"]
+# item : quantity
+cart = {
+    "Milk": 2,
+    "Eggs": 1,
+    "Rice": 3
+}
 
-total = 0
+subtotal = 0
 
 print("🛒 Shopping Bill")
-print("----------------")
+print("------------------------------")
+print("Item     Qty   Price   Total")
 
-for item in cart:
+for item, qty in cart.items():
     price = items[item]
-    total += price
-    print(item, ":", price)
+    item_total = price * qty
+    subtotal += item_total
+    print(item, " ", qty, "   ", price, "    ", item_total)
 
 # discount logic
 discount = 0
-if total >= 200:
-    discount = total * 0.10
+if subtotal >= 300:
+    discount = subtotal * 0.10
 
-final_amount = total - discount
+# GST
+gst = subtotal * 0.05
 
-print("\nSubtotal:", total)
-print("Discount:", discount)
-print("Amount to Pay:", final_amount)
+final_amount = subtotal + gst - discount
+
+print("\nSummary")
+print("------------------------------")
+print("Subtotal :", subtotal)
+print("GST (5%) :", gst)
+print("Discount :", discount)
+print("Amount to Pay :", final_amount)
+
