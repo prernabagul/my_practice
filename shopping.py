@@ -1,3 +1,4 @@
+# Available items
 items = {
     "Milk": 50,
     "Bread": 40,
@@ -13,9 +14,10 @@ while True:
     print("1. Show items")
     print("2. Add item to cart")
     print("3. View cart & bill")
-    print("4. Exit")
+    print("4. Remove item from cart")   # <<< NEW / ADDED >>>
+    print("5. Exit")                    # <<< CHANGED >>>
 
-    choice = input("Enter your choice (1-4): ")
+    choice = input("Enter your choice (1-5): ")
 
     # Show items
     if choice == "1":
@@ -23,7 +25,7 @@ while True:
         for item, price in items.items():
             print(item, "-", price)
 
-    # Add to cart
+    # Add item
     elif choice == "2":
         item = input("Enter item name: ").title()
         if item in items:
@@ -63,10 +65,28 @@ while True:
             print("Discount:", discount)
             print("Amount to Pay:", final_amount)
 
-    # Exit
+    # <<< NEW / ADDED >>> Remove item from cart
     elif choice == "4":
+        if not cart:
+            print("\nCart is empty")
+        else:
+            print("\nItems in Cart:")
+            for item in cart:
+                print("-", item)
+
+            remove_item = input("Enter item name to remove: ").title()
+
+            if remove_item in cart:
+                del cart[remove_item]
+                print(remove_item, "removed from cart")
+            else:
+                print("Item not found in cart")
+
+    # Exit
+    elif choice == "5":
         print("Thank you for shopping 😊")
         break
 
     else:
         print("Invalid choice, please try again")
+
